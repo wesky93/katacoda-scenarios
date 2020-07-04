@@ -1,5 +1,13 @@
 
-### set role
-```bash
-kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster-admin --user=system:anonymous
-```
+### Setp 1 - install argo & argo events
+create argo namespace
+`kubectl create namespace argo`{{execute}}
+
+install argo 
+`kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo/stable/manifests/install.yaml`{{execute}}
+
+create event namespace 
+`kubectl create namespace argo-events`{{execute}}
+
+install argo-events
+`kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-events/stable/manifests/install.yaml`{{execute}}

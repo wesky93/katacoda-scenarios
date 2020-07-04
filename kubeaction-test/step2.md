@@ -1,8 +1,13 @@
 
-### install argo
-```bash
-kubectl create namespace argo
-kubectl apply -n argo -f https://raw.githubusercontent.com/argoproj/argo/stable/manifests/install.yaml
-kubectl create namespace argo-events
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-events/stable/manifests/install.yaml
-```
+# step 2 - install argo & argo events
+
+create kubeaction namespace
+`kubectl create namespace kubeaction`{{execute}}
+
+install kubeaction CRD 
+`kubectl apply -n kubeaction -f https://raw.githubusercontent.com/spaceone-dev/KubeAction/master/k8s/crd.yaml
+`{{execute}}
+
+install kubeaction Controller
+`kubectl apply -n kubeaction -f https://raw.githubusercontent.com/spaceone-dev/KubeAction/master/k8s/conroller.yaml
+`{{execute}}
