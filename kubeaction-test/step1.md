@@ -2,7 +2,7 @@
 ### Setp 1 - install argo & argo events
 
 check minikube is running
-`minikube stauts`{{execute}}
+`minikube status`{{execute}}
 
 create argo namespace
 `kubectl create namespace argo`{{execute}}
