@@ -1,7 +1,11 @@
 
-### install kubeaction
-```bash
-kubectl create namespace kubeaction
-kubectl apply -n kubeaction -f https://raw.githubusercontent.com/spaceone-dev/KubeAction/master/k8s/crd.yaml
-kubectl apply -n kubeaction -f https://raw.githubusercontent.com/spaceone-dev/KubeAction/master/k8s/conroller.yaml
-```
+# test simple flow
+
+check flow
+`cat simple-flow`{{excute}}
+
+check flow
+`kubectal apply -f simple-flow.yaml -n kubeaction`{{excute}}
+
+check flow result
+`kubectal get wfs`{{excute}}
